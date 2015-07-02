@@ -1,4 +1,4 @@
-from simple_flask.rest.rest import run_engine
+from simple_flask.rest import rest as rest_engine
 
 
-run_engine('0.0.0.0')
+rest_engine.run_engine('0.0.0.0')
