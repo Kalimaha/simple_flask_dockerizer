@@ -14,8 +14,9 @@ docker build -t simple_flask .
 docker images
 ```
 
-REPOSITORY      TAG         IMAGE ID            CREATED             VIRTUAL SIZE
-simple_flask    latest      b5dc209bf592        5 minutes ago       503 MB
+|REPOSITORY|TAG|IMAGE ID|CREATED|VIRTUAL SIZE|
+|----------|---|--------|-------|------------|
+|simple_flask|latest|b5dc209bf592|5 minutes ago|503 MB|
 
 ## Run the container
 
