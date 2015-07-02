@@ -2,19 +2,19 @@
 Settings to create a Docker image for a simple Flask project.
 
 
-## Build the container
+## Build Docker Container
 
 ```
 docker build -t simple_flask .
 ```
 
-The Docker file create a container starting from Ubuntu 14.04:
+The Docker file creates a container starting from Ubuntu 14.04:
 
 ```
 FROM ubuntu:14.04
 ```
 
-then install Python:
+then it installs Python:
 
 ```
 RUN apt-get install -y -q build-essential python-gdal python-simplejson
@@ -22,14 +22,14 @@ RUN apt-get install -y python python-pip wget
 RUN apt-get install -y python-dev
 ```
 
-then it creates a virtual environment:
+and finally creates a virtual environment:
 
 ```
 RUN pip install virtualenv
 ```
 
-Required Python projects are installed by ```pip``` straight from GitHub by setting the repositories URL in the 
-```requirements.txt``` file:
+Required Python projects are installed through ```pip``` in the virtual environment straight from GitHub by setting 
+the repositories URL in the ```requirements.txt``` file:
 
 ```
 watchdog
@@ -50,13 +50,13 @@ docker images
 |----------|---|--------|-------|------------|
 |simple_flask|latest|b5dc209bf592|5 minutes ago|503 MB|
 
-## Run the container
+## Run Docker Container
 
 ```
 docker run -it -p 5000:00 simple_flask /deployment/env/bin/python /deployment/start.py
 ```
 
-This command execute the simple Python script contained in the project, that imports the main Flask app and runs it:
+This command executes the simple Python script contained in the project to import the main Flask app and run it:
 
 ```python
 from simple_flask.rest import rest as rest_engine
@@ -66,3 +66,29 @@ rest_engine.run_engine('0.0.0.0')
 ```
 
 The Flask ```host``` has been set to ```0.0.0.0``` in order to work with Docker.
+
+## Access the Application
+
+The application is now up and running and it is possible to access it through the browser at:
+
+```
+http://localhost:5000/Kalimaha/
+```
+
+that shows:
+
+```
+Hello Kalimaha from CORE!
+```
+
+The app has a blueprint that can be accessed at:
+
+```
+http://localhost:5000/test/Kalimaha/
+```
+
+that shows:
+
+```
+Hello Kalimaha!
+```
