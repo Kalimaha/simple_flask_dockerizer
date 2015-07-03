@@ -1,5 +1,5 @@
 # Simple Flask Dockerizer
-Settings to create a Docker image for a simple Flask project.
+Settings to create a Docker image for a simple Flask project. This project has been created for a tutorial described on [Kalimadev Blog](http://wp.me/p61qQI-s).
 
 
 ## Build Docker Container
