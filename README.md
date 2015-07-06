@@ -1,3 +1,5 @@
+[![License](http://img.shields.io/:license-GPL2-green.svg)](http://doge.mit-license.org)
+
 # Simple Flask Dockerizer
 Settings to create a Docker image for a simple Flask project. This project has been created for a tutorial described on [Kalimadev Blog](http://wp.me/p61qQI-s).
 
