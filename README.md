@@ -55,7 +55,7 @@ docker images
 ## Run Docker Container
 
 ```
-docker run -it -p 5000:00 simple_flask /deployment/env/bin/python /deployment/start.py
+docker run -it -p 5000:5000 simple_flask /deployment/env/bin/python /deployment/start.py
 ```
 
 This command executes the simple Python script contained in the project to import the main Flask app and run it:
